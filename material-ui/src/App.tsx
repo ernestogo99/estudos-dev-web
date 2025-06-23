@@ -1,19 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
-import MuiTypography from './components/muiTypography'
-import MuiButton from './components/muiButton'
-import MuiButtonGroup from './components/muiButtonGroup'
+import MuiAutoComplete from './components/muiAutoComplete'
+import MuiRating from './components/muiRating'
+
+
+
+
 
 function App() {
- 
+
 
   return (
     <>
-    
-      <MuiButton></MuiButton>
-      <MuiButtonGroup></MuiButtonGroup>
+      <MuiAutoComplete></MuiAutoComplete>
     </>
   )
 }
