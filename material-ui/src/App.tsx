@@ -1,7 +1,8 @@
 
 import './App.css'
-import MuiAutoComplete from './components/muiAutoComplete'
-import MuiRating from './components/muiRating'
+import Muibox from './components/layout/muibox'
+import MuiGrid from './components/layout/muigrid'
+
 
 
 
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <>
-      <MuiAutoComplete></MuiAutoComplete>
+     <Muibox></Muibox>
     </>
   )
 }
