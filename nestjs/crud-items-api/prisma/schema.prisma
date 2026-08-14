@@ -1,0 +1,40 @@
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+  moduleFormat = "cjs"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Users{
+  id String @id @default(uuid())
+  email String @unique
+  name String?
+  password String
+  documents Document[]
+}
+
+
+
+model Document {
+  id            String           @id @default(uuid())
+  userId        String
+  user          Users             @relation(fields: [userId], references: [id])
+  fileUrl       String
+  extractedText String
+  interactions  LLMInteraction[]
+  createdAt     DateTime         @default(now())
+}
+
+
+model LLMInteraction {
+  id         String   @id @default(uuid())
+  documentId String
+  document   Document @relation(fields: [documentId], references: [id])
+  question   String
+  answer     String
+  createdAt  DateTime @default(now())
+}
