@@ -57,19 +57,29 @@ O Grafana é utilizado para acompanhar a saúde, o desempenho, a disponibilidade
 Seu funcionamento pode ser representado assim:
 
 ```text
-Aplicação ou infraestrutura
-                                          |
-                                          v
-               Coleta de dados
-                                          |
-                                          v
-                      Fonte de dados
-                                          |
-                                          v
-                                   Grafana
-                                          |
-                                          v
-              Dashboards e alertas
++---------------------------+
+| Aplicação ou infraestrutura |
++-------------+-------------+
+              |
+              v
++---------------------------+
+| Coleta de dados             |
++-------------+-------------+
+              |
+              v
++---------------------------+
+| Fonte de dados              |
++-------------+-------------+
+              |
+              v
++---------------------------+
+| Grafana                     |
++-------------+-------------+
+              |
+              v
++---------------------------+
+| Dashboards e alertas        |
++---------------------------+
 ```
 
 ## O que é o Prometheus?
@@ -81,19 +91,21 @@ Enquanto o Grafana é utilizado principalmente para visualizar os dados, o Prome
 Uma arquitetura comum é:
 
 ```text
-+-----------------+       Métricas       +-----------------+
-| Aplicação ou    | -------------------> | Prometheus      |
-| servidor        |                       | Coleta e        |
-+-----------------+                       | armazena        |
-                                                                                                                                                    +--------+--------+
-                                                                                                                                                                                      |
-                                                                                                                                                                                      | PromQL
-                                                                                                                                                                                      v
-                                                                                                                                                    +-----------------+
-                                                                                                                                                    | Grafana         |
-                                                                                                                                                    | Dashboards e    |
-                                                                                                                                                    | alertas         |
-                                                                                                                                                    +-----------------+
++---------------------------+
+| Aplicação ou servidor     |
++-------------+-------------+
+              | Métricas
+              v
++---------------------------+
+| Prometheus                 |
+| Coleta e armazena métricas|
++-------------+-------------+
+              | Consultas PromQL
+              v
++---------------------------+
+| Grafana                    |
+| Dashboards e alertas       |
++---------------------------+
 ```
 
 ## O que é o Node Exporter?
