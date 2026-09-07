@@ -1,0 +1,15 @@
+- name: Lab 3 - Checagem Automatica de Rede via API REST
+  hosts: local
+  gather_facts: no
+
+  tasks:
+    - name: Consultar endpoint de status via API REST
+      ansible.builtin.uri:
+        url: "https://httpbin.org/get"
+        method: GET
+        return_content: yes
+      register: api_response
+
+    - name: Exibir resultado da automacao
+      ansible.builtin.debug:
+        msg: "Status HTTP: {{ api_response.status }} | IP detectado: {{ api_response.json.origin }}"
