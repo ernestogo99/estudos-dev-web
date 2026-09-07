@@ -8,8 +8,16 @@
 
 ## Sumário
 
-- [Definições](#definições) - [Ansible](#o-que-é-o-ansible) - [Grafana](#o-que-é-o-grafana) - [Prometheus](#o-que-é-o-prometheus) - [Node Exporter](#o-que-é-o-node-exporter)
-- [Execução do laboratório](#execução-do-laboratório) - [Pré-requisitos](#pré-requisitos) - [Estrutura de pastas](#estrutura-de-pastas) - [Passo a passo](#passo-a-passo) - [Serviços disponíveis](#serviços-disponíveis)
+- [Definições](#definições)
+- [Ansible](#o-que-é-o-ansible)
+- [Grafana](#o-que-é-o-grafana)
+- [Prometheus](#o-que-é-o-prometheus)
+- [Node Exporter](#o-que-é-o-node-exporter)
+- [Execução do laboratório](#execução-do-laboratório)
+- [Pré-requisitos](#pré-requisitos)
+- [Estrutura de pastas](#estrutura-de-pastas)
+- [Passo a passo](#passo-a-passo)
+- [Serviços disponíveis](#serviços-disponíveis)
 
 # Definições
 
